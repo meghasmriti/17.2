@@ -1,0 +1,20 @@
+create 'clicks','hits'
+alter 'clicks',NAME=>'hits',VERSIONS=>5
+
+
+
+put 'clicks','9.201.123.123','hits:count','2'
+put 'clicks','9.201.123.123','hits:type','candid'
+put 'clicks','9.201.123.123','hits:date','12.2.90'
+
+
+put 'clicks','9.201.123.2','hits:count','3'
+put 'clicks','9.201.123.2','hits:type','natural'
+put 'clicks','9.201.123.2','hits:date','12.2.89'
+
+
+alter 'clicks', NAME=>'hits', count =>5
+
+scan 'clicks'
+
+
